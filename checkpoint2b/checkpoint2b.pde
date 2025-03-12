@@ -18,16 +18,10 @@ color grey  = #B5C0D0;
 boolean mouseReleased;
 boolean wasPressed;
 color bkg;
-
+PImage buttonpic;
 
 Button[] myButtons;
-x =_x;
-y =_y;
-w = _w;
-h =_h;
-normal = norm;
-highlight = high;
-text = t;
+
 
 
 void setup() {
@@ -36,11 +30,15 @@ void setup() {
   rectMode(CENTER);
   bkg = white;
 
+
+
+buttonpic = loadImage("lebron.jpg");
+
   myButtons = new Button[4];
   myButtons[0] = new Button ("BLUE", 200, 200, 200, 150, blue, pink);
   myButtons[1] =new Button ("GREEN", 200, 400, 200, 150, green, yellow);
   myButtons[2] = new Button ("PINK", 400, 650, 600, 200, pink, blue);
-  myButtons[3] =new Button ("BLACK", 550, 300, 400, 350, black, white);
+  myButtons[3] =new Button (buttonpic, 550, 300, 400, 350, black, white);
 }
 void draw() {
 
